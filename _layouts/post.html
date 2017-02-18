@@ -5,6 +5,10 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  <div class="rogue-ratings">
+    <p><em>Random Level Generation: </em>{{ page.score-random }}</p>
+    
+  </div>
   {{ content }}
 </div>
 
