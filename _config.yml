@@ -18,7 +18,7 @@ author:
   name:           'Aidan McQuay'
   url:            https://floatsolutions.net
 
-paginate:         5
+paginate:         100
 
 # Custom vars
 version:          1.0.1
