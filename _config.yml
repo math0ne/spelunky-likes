@@ -8,15 +8,15 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            BlackDoc
-tagline:          Black Theme for Jekyll
-description:      "A two-column black theme with a scrolling sidebar. Ideal for sites requiring a master-detail layout, e.g. documentation, cheatsheets, lyrics, notes..."
-url:              https://github.com/karloespiritu/blackdoc
+title:            Spelunk-likes
+tagline:          A curated list of games that are similar to Spelunky
+description:      "A curated list of games that are similar to Spelunky"
+url:              https://openist.github.io/spelunky-likes/
 baseurl:          /spelunky-likes/
 
 author:
-  name:           'Karlo Espiritu'
-  url:            https://twitter.com/karloespiritu
+  name:           'Aidan McQuay'
+  url:            https://floatsolutions.net
 
 paginate:         5
 
@@ -24,4 +24,4 @@ paginate:         5
 version:          1.0.1
 
 github:
-  repo:           https://github.com/karloespiritu/blackdoc
+  repo:           https://github.com/openist/spelunky-likes
