@@ -30,29 +30,28 @@ ______ _            _   ______
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Fresca', sans-serif;
 }
 
 body {
-  color: #848482;
-  background-color: #000000;
+  color: #171717;
+  background-color:#2a2a2a;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Fresca', sans-serif;
   color: #aaa;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  font-family: 'EB Garamond', serif;
-  color: #50585D;
+  font-family: 'Fresca', sans-serif;
   font-kerning: auto;
   font-feature-settings: "kern","liga","dlig","hlig","cswh";
   font-synthesis: weight style;
 }
 
 a {
-  color: #ffeb99;
+
   transition: color ease 0.3s;
 }
 
@@ -123,16 +122,7 @@ tbody tr:nth-child(odd) th {
   border: 1px solid #444;
 }
 
-@media (min-width: 48em) {
-  html {
-    font-size: 16px;
-  }
-}
-@media (min-width: 58em) {
-  html {
-    font-size: 20px;
-  }
-}
+
 
 /*
  * Messages
@@ -174,34 +164,36 @@ tbody tr:nth-child(odd) th {
  */
 
 .sidebar {
-  text-align: center;
-  padding: 2rem 1rem;
+  padding: .5rem .5rem;
   color: rgba(255,255,255,.5);
-  background-color: #000;
   overflow: auto;
 }
-@media (min-width: 48em) {
+@media (min-width: 1042px) {
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 15.5rem;
     text-align: left;
   }
 }
 
-/* Sidebar links */
-.sidebar a {
-  color: #caad00;
+
+/* About section */
+body .sidebar-about h1 {
+
+  margin-top: 0;
+
+
 }
 
 /* About section */
-.sidebar-about h1 {
-  color: #caad00;
-  margin-top: 0;
-  font-family: 'Noto Serif', serif;
-  font-size: 2.25rem;
+body .sidebar-about h1 a{
+  color: #e8e8e8;
+  font-family: 'Fresca', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
 
 }
 
@@ -227,7 +219,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+@media (min-width: 1042px) {
   .sidebar-sticky {
 /*    position: absolute;*/
     right:  1rem;
@@ -244,22 +236,26 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top: 1.9rem;
+  padding-top: 0rem;
   padding-bottom: 4rem;
+
+}
+@media (min-width: 1042px) {
+  .content {
+    padding-top: .7rem;
+  }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 1042px) {
   .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    margin-left: 15rem;
+    margin-right: 0rem;
   }
 }
 
 @media (min-width: 64em) {
   .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
+
   }
 }
 
@@ -274,7 +270,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #caad00;
+  color: #ddd;
 }
 
 /*
@@ -407,3 +403,7 @@ a.sidebar-nav-item:focus {
   background:#7d7d7d;
 }
 
+
+.post .post-title{
+  font-size: 16px;
+}

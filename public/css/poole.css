@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  color: #515151;
+
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -67,7 +67,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+
   text-decoration: none;
 }
 a strong {
@@ -88,25 +88,29 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+
 }
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.25rem;
+
 }
 h4, h5, h6 {
   margin-top: 1rem;
-  font-size: 1rem;
+
 }
 
 /* Body text */
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+}
+@media (max-width: 1042px) {
+  p{
+    margin-bottom: 0px;
+  }
 }
 
 strong {
@@ -117,7 +121,6 @@ strong {
 /* Lists */
 ul, ol, dl {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 dt {
@@ -231,7 +234,6 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
   border-radius: 5px;
 }
 
@@ -287,9 +289,8 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  max-width: 38rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
+  padding-left:  .5rem;
+  padding-right: .5rem;
   margin-left:  auto;
   margin-right: auto;
 }
@@ -331,7 +332,7 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+
 }
 
 /* Blog post or page title */

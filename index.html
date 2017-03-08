@@ -3,18 +3,166 @@ layout: default
 title: Home
 ---
 
+
+<div class="main-sort-nav">
+  <ul class="Nav Nav_Small MainNav">
+    <li class="MainNav-Button sort-alpha"><a href="#">Alpha</a></li>
+    <li class="MainNav-Button sort-score"><a href="#">Score</a></li>
+    <li class="MainNav-Button sort-published MainNav-Button_LeftOfActive"><a href="#">Published</a></li>
+    <li class="MainNav-Button sort-added MainNav-Button_Active"><a href="#">Added</a></li>
+  </ul>
+</div>
+
+
+
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url | remove_first: '/'}}">
-        {{ post.title }}
-      </a>
-    </h1>
+    {% assign total = 25  %}
 
-    <div class="rogue-image">
-      <img src="{{ site.url }}public/images/{{ post.game-image }}">
+    {% assign score-random-tmp = post.score-random | times: 1.0  %}
+    {% assign score-progression-tmp = post.score-progression | times: 1.0  %}
+    {% assign score-platforming-tmp = post.score-platforming | times: 1.0  %}
+    {% assign score-permadeath-tmp = post.score-permadeath | times: 1.0  %}
+    {% assign score-exploration-tmp = post.score-exploration | times: 1.0   %}
+
+    {% assign score-tmp-my-total = score-random-tmp | plus: score-progression-tmp | plus: score-platforming-tmp | plus: score-permadeath-tmp | plus: score-exploration-tmp %}
+    {% assign score-tmp-my-total-divided = score-tmp-my-total | divided_by: total %}
+    {% assign score-tmp-final = score-tmp-my-total-divided | times: 100 %}
+
+    {% if post.game-published %}
+      {% assign published-data = post.game-published  | date: "%Y-%m-%d" %}
+      {% assign published-data-display = post.game-published  | date: "%Y - %m" %}
+    {% else %}
+      {% assign published-data = "now"  | date: "%Y-%m-%d" %}
+      {% assign published-data-display = "UNRELEASED" %}
+    {% endif %}
+
+    {% if post.game-status == "Early Access" %}
+      {% assign earlyaccess = "<div class='earlyaccess'>EARLY ACCESS</div>" %}
+      {% assign earlyaccessdiv = "earlyaccessmargin" %}
+    {% else %}
+      {% assign earlyaccess = "" %}
+      {% assign earlyaccessdiv = "" %}
+    {% endif %}
+
+    <div class="post" data-name="{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}" data-score="{{ score-tmp-final }}" data-added="{{ post.date-added | date: "%Y-%m-%d" }}" data-published="{{ published-data }}">
+      <h1 class="post-title">
+          {{ post.title }}
+      </h1>
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ score-tmp-final }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>Spelunkyness:</em> {{ score-tmp-final }}%</div>
+        </div>
+      </div>
+      {{ earlyaccess }}
+      <div class="rogue-image {{ earlyaccessdiv }}">
+        <a data-fancybox="gallery"  href="javascript:;" data-src="#{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}"><img src="/spelunky-likes/public/images/{{ post.game-image }}"></a>
+
+      </div>
+       <div class="date-widget">
+         <div class="date-widget-top">
+           ADDED
+         </div>
+         <div class="date-widget-bottom">
+           {{ post.date-added  | date: "%Y - %m" }}
+         </div>
+       </div>
+       <div class="date-widget">
+         <div class="date-widget-top">
+           RELEASED
+         </div>
+         <div class="date-widget-bottom">
+           {{ published-data-display }}
+         </div>
+       </div>
     </div>
-  </div>
+
+
+    <div class="post postpop" style="display: none;" id="{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}" data-name="{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}" data-score="{{ score-tmp-final }}" data-added="{{ post.date-added | date: "%Y-%m-%d" }}" data-published="{{ published-data }}">
+      <h1 class="post-title">
+          {{ post.title }}
+      </h1>
+        <p>{{ post.content }}</p>
+      <div class="rogue-image">
+    <img src="/spelunky-likes/public/images/{{ post.game-image }}">
+      </div>
+
+      <div class="link-widget"><a target="blank" href="{{ post.game-url }}">WEBSITE</a></div>
+      <div class="link-widget"><a  target="blank" href="{{ post.game-publisher }}">PUBLISHER</a></div>
+
+       <div class="date-widget">
+         <div class="date-widget-top">
+           ADDED
+         </div>
+         <div class="date-widget-bottom">
+           {{ post.date-added  | date: "%Y - %m" }}
+         </div>
+       </div>
+       <div class="date-widget">
+         <div class="date-widget-top">
+           RELEASED
+         </div>
+         <div class="date-widget-bottom">
+           {{ published-data-display }}
+         </div>
+       </div>
+
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ score-tmp-final }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>Spelunkyness:</em> {{ score-tmp-final }}%</div>
+        </div>
+      </div>
+
+
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ post.score-random | times: 2 | times: 10 }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>Random: </em>{{ post.score-random }}</div>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ post.score-progression | times: 2 | times: 10 }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>Character Progression: </em>{{ post.score-progression }}</div>
+        </div>
+      </div>
+
+
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ post.score-platforming | times: 2 | times: 10 }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>2D Platforming: </em>{{ post.score-platforming }}</div>
+        </div>
+      </div>
+
+
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ post.score-permadeath | times: 2 | times: 10 }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>Permadeath: </em>{{ post.score-permadeath }}</div>
+        </div>
+      </div>
+
+
+      <div class="info">
+        <div class="skillbar clearfix " data-percent="{{ post.score-exploration | times: 2 | times: 10 }}%">
+          <div class="skillbar-bar" style="background: rgb(81, 81, 81);"></div>
+          <div class="skill-bar-percent"><em>Exploration: </em>{{ post.score-exploration }}</div>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
   {% endfor %}
 </div>
+<p class="copyright">Credit to <a href="http://supajackle.deviantart.com/">supajackle</a> for the pixel art.</p>
+<p class="copyright">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
