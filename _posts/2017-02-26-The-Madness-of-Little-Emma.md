@@ -4,7 +4,7 @@ title: Maddness of LE
 date-added: 2017-02-26
 game-url: http://madnessoflittleemma.com/
 game-publisher: http://www.rupeck.com/
-game-image: UefYawD.jpg
+game-image: ss_70a95f0e0cc45972eb8e987bc1774d70e56ea931.1920x1080.jpg
 game-published: Dec 21, 2015
 game-status: RELEASED
 score-random: 4
