@@ -57,7 +57,7 @@ title: Home
       </div>
       {{ earlyaccess }}
       <div class="rogue-image {{ earlyaccessdiv }}">
-        <a data-fancybox="gallery"  href="javascript:;" data-src="#{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}"><img src="/spelunky-likes/public/images/{{ post.game-image }}"></a>
+        <a data-fancybox="gallery"  href="javascript:;" data-src="#{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}"><img src="/public/images/{{ post.game-image }}"></a>
 
       </div>
        <div class="date-widget">
@@ -85,7 +85,7 @@ title: Home
       </h1>
         <p>{{ post.content }}</p>
       <div class="rogue-image">
-    <img src="/spelunky-likes/public/images/{{ post.game-image }}">
+    <img src="/public/images/{{ post.game-image }}">
       </div>
 
       <div class="link-widget"><a target="blank" href="{{ post.game-url }}">WEBSITE</a></div>
