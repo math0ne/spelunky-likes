@@ -14,8 +14,8 @@ description:      A curated list of games that are similar to Spelunky.
 description_extended: |
   Spelunky is widely regarded as one of the best games of the last decade and has inspired tons of developers to create games in the same vein.  I love these games and I think many others to too so for the last couple years I did a reddit post that collected games in this new micro genre.  It was fairly popular so I have decided to turn it into a small showcase site with my personal rankings on the specific aspects I believe define this genre. The specific aspects are as follows:
 
-  * Random Level Generation
-    * Are the levels truly random, pieced together from pre-built rooms, there are many ways to go about this but the closer to to traditional true random roguelike level generation the better.
+  * Randomness
+    * Are the levels truly random, or pieced together from pre-built rooms into a metroidvania style interconnected layout.  There are many ways to go about random level generation but the closer to to traditional true random roguelike level generation the better.
   * Character Progression
     * In spelunky you have a couple ways of gearing up through items, in other games it may be a level system or a skill system, doesn't matter as long as your chatacter can progress in some way.
   * 2D Platforming
@@ -24,6 +24,8 @@ description_extended: |
     * We will accept meta progression, but the further away from real permadeath we get the worse in my opinion.
   * Exploration
     * How many secrets and branching paths does the game have, one of the core tenants of roguelike games this was well represented with spelunky.
+
+I welcome any suggestions or comments, send a pull request or send me a message on github.
 
 url:              https://openist.github.io/spelunky-likes/
 baseurl:          /spelunky-likes/
