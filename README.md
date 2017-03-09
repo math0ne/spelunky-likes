@@ -1,4 +1,4 @@
-<img style="float: right;" src="https://github.com/openist/spelunky-likes/blob/master/public/images/golden_idol_by_supajackle-d6wacmx.png">
+<img align="left" src="https://github.com/openist/spelunky-likes/blob/master/public/images/golden_idol_by_supajackle-d6wacmx.png">
 
 # Spelunky-likes
 
