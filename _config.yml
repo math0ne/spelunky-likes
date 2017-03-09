@@ -12,20 +12,20 @@ title:            Spelunky-likes
 tagline:          A curated list of games that are similar to Spelunky.
 description:      A curated list of games that are similar to Spelunky.
 description_extended: |
-  Spelunky is widely regarded as one of the best games of the last decade and has inspired tons of developers to create games in the same vein.  I love these games and I think many others to too so for the last couple years I did a reddit post that collected games in this new micro genre.  It was fairly popular so I have decided to turn it into a small showcase site with my personal rankings on the specific aspects I believe define this genre. The specific aspects are as follows:
+  Spelunky is widely regarded as one of the best games of the last decade and has inspired tons of developers to create games in the same vein. I love these games and I think many others do too, so for the last couple of years I did a reddit post that collected games in this new micro genre. Previous posts have been fairly popular so I decided to turn it into a small showcase site with my personal rankings on the specific aspects I believe define this genre. The specific aspects are as follows:
 
   * Randomness
-    * Are the levels truly random, or pieced together from pre-built rooms into a metroidvania style interconnected layout.  There are many ways to go about random level generation but the closer to to traditional true random roguelike level generation the better.
+    * Are the levels truly random, or pieced together from pre-built rooms into a metroidvania style interconnected layout?  There are many ways to go about random level generation but the closer it is to traditional true random roguelike level generation, the better. Traditional roguelike random game generation concepts like weighted random item distribution are major points.
   * Character Progression
-    * In spelunky you have a couple ways of gearing up through items, in other games it may be a level system or a skill system, doesn't matter as long as your chatacter can progress in some way.
+    * In spelunky you have a couple of ways of gearing up through items.In other games it may be a level system or a skill system. It doesn't matter as long as your character can progress in some way.
   * 2D Platforming
-    * How traditional is the platforming, can you jump on enemies? Can you run?  Is there physics?
+    * How traditional is the platforming, can you jump on enemies? Can you run like in mario?  Is there a physics engine powering the world?
   * Permadeath
-    * We will accept meta progression, but the further away from real permadeath we get the worse in my opinion.
+    * Meta progression is a core idea in spelunky and most of these games, but the further away from real permadeath we get, the worse in my opinion. The game cycle should be tight, it should be super easy to die then get back into the action.
   * Exploration
-    * How many secrets and branching paths does the game have, one of the core tenants of roguelike games this was well represented with spelunky.
+    * How many secrets and branching paths does the game have? One of the core tenants of roguelike games, this was well represented with spelunky's secrets and alternate routes.
 
-  I welcome any suggestions or comments, send a pull request or send me a message on github.
+  This is all just personal opinion and I welcome any suggestions or comments. Send a pull request or send me a message on github.
 
 url:              https://openist.github.io/spelunky-likes/
 baseurl:          /spelunky-likes/
