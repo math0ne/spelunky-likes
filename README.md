@@ -1,6 +1,6 @@
-# Spelunky-likes
+<img align="left" src="https://github.com/openist/spelunky-likes/blob/master/public/images/golden_idol_by_supajackle-d6wacmx.png">
 
-![screenshots](https://github.com/openist/spelunky-likes/blob/master/public/images/golden_idol_by_supajackle-d6wacmx.png)
+# Spelunky-likes
 
 A curated list of game that are similar to Spelunky.  Website is here: http://spelunkylikes.ga/
 
