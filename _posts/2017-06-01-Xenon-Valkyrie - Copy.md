@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Xenon Valkyrie
+title: Twin Flames
 date-added: 2017-05-32
 game-url: http://twinflamesgame.com/
 game-publisher: http://fatpanda.tv/
