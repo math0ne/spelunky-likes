@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Xenon Valkyrie
-date-added: 2017-05-32
+date-added: 2017-06-01
 game-url: http://www.diabolicalmind.com/game/xv/xenonvalkyrie.html
 game-publisher: http://www.diabolicalmind.com
 game-image: xenon_valkyrie.jpg
