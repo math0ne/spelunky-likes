@@ -20,6 +20,19 @@ a {
   color: white;
 }
 
+.post.controller-support::after {
+    content: " ";
+    display: block;
+    background-image: url("/public/images/controller.png");
+    width: 40px;
+    height: 30px;
+    float: right;
+    margin-top: -100px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    opacity: .4;
+}
+
 .sidebar-logo{
   margin-left: auto;
   margin-right: auto;
