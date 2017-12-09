@@ -45,7 +45,13 @@ title: Home
       {% assign earlyaccessdiv = "" %}
     {% endif %}
 
-    <div class="post" data-name="{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}" data-score="{{ score-tmp-final }}" data-added="{{ post.date-added | date: "%Y-%m-%d" }}" data-published="{{ published-data }}">
+    {% if post.score-controller == 1 %}
+      {% assign controllerclass = "controller support" %}
+    {% else %}
+      {% assign controllerclass = "" %}
+    {% endif %}
+
+    <div class="post{{ controllerclass }}" data-name="{{ post.title | downcase | replace: 'of ', '' | replace: 'the ', '' | replace: ' ', ''}}" data-score="{{ score-tmp-final }}" data-added="{{ post.date-added | date: "%Y-%m-%d" }}" data-published="{{ published-data }}">
       <h1 class="post-title">
           {{ post.title }}
       </h1>
