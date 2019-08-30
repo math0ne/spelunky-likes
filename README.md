@@ -2,6 +2,6 @@
 
 # Spelunky-likes
 
-A curated list of game that are similar to Spelunky.  Website is here: http://spelunkylikes.ga/
+A curated list of game that are similar to Spelunky.  Website is here: http://spelunkylikes.win
 
 Got any suggestions?  Send a pull request, or send me a message on Github.
